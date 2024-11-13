@@ -78,8 +78,8 @@ import { ToasterService } from "../../shared/services/toaster.service";
   `,
 })
 export class SignUpComponent {
-  mobile: string = "";
-  password: string = "";
+  mobile = "";
+  password = "";
   apiService = inject(ApiService);
   toaster = inject(ToasterService);
   router = inject(Router);

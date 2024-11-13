@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-declare var Razorpay: any;
+declare let Razorpay: any;
 @Injectable({
   providedIn: "root",
 })
@@ -7,7 +7,7 @@ export class PaymentService {
   constructor() {}
 
   createPayment(options: any) {
-    var rzp1 = new Razorpay(options);
+    const rzp1 = new Razorpay(options);
     rzp1.open();
   }
 }

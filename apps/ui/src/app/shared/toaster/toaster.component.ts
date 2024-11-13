@@ -1,5 +1,5 @@
 import { animate, style, transition, trigger } from "@angular/animations";
-import { Component, inject, OnInit } from "@angular/core";
+import { Component, inject, OnInit, OnDestroy } from "@angular/core";
 import { ToasterService, ToastMessage } from "../services/toaster.service";
 import { CommonModule } from "@angular/common";
 import { Subscription, timer } from "rxjs";
@@ -24,7 +24,7 @@ import { switchMap } from "rxjs/operators";
     ]),
   ],
 })
-export class ToasterComponent implements OnInit {
+export class ToasterComponent implements OnInit, OnDestroy {
   toasterService = inject(ToasterService);
   toastConfig!: ToastMessage | null;
   subscription!: Subscription;

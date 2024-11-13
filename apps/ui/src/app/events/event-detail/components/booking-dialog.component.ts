@@ -78,7 +78,7 @@ import { PaymentService } from "../../../shared/services/payment.service";
 export class BookingDialogComponent {
   @Input() event: any;
   @Output() close = new EventEmitter<void>();
-  tickets: number = 1;
+  tickets = 1;
   paymentService = inject(PaymentService);
   closeDialog() {
     this.close.emit();
